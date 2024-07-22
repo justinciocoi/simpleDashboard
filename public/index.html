@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleDash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="backdrop">
+        <img id="background" src="space.jpg">
+    </div>
+    <div id="datetime"></div>
+    <div class="dashContainer">
+        <!--
+        <div class="dashItem" id="photoBox">
+            <img id="photo" src="ageOfStars.jpeg">
+        </div>
+        -->
+        <div class="dashItem" id="weatherBox1">
+            <div class="cityName">Oceanside</div>
+            <div class="forecastFlexBox">
+                <div class="weatherInfo" id="day1">
+                    <div class="weatherDate" id="day1Date"></div>
+                    <div class="weatherTemp" id="day1Temp"></div>
+                    <img class="weatherIcon" id="day1Icon" src="">
+                </div>
+                <div class="weatherInfo" id="day2">
+                    <div class="weatherDate" id="day2Date"></div>
+                    <div class="weatherTemp" id="day2Temp"></div>
+                    <img class="weatherIcon" id="day2Icon" src="">
+                </div>
+                <div class="weatherInfo" id="day3">
+                    <div class="weatherDate" id="day3Date"></div>
+                    <div class="weatherTemp" id="day3Temp"></div>
+                    <img class="weatherIcon" id="day3Icon" src="">
+                </div>
+            </div>
+
+            <div class="hourCount">+12 Hours</div>
+
+            <div class="forecastFlexBox">
+                <div class="weatherInfo" id="day1_N">
+                   
+                    <div class="weatherTemp" id="day1TempN"></div>
+                    <img class="weatherIcon" id="day1IconN" src="">
+                </div>
+                <div class="weatherInfo" id="day2_N">
+                    
+                    <div class="weatherTemp" id="day2TempN"></div>
+                    <img class="weatherIcon" id="day2IconN" src="">
+                </div>
+                <div class="weatherInfo" id="day3_N">
+                   
+                    <div class="weatherTemp" id="day3TempN"></div>
+                    <img class="weatherIcon" id="day3IconN" src="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="dashItem" id="weatherBox2">
+            <div class="cityName">Manhattan</div>
+            <div class="forecastFlexBox">
+                <div class="weatherInfo" id="day1_2">
+                    <div class="weatherDate" id="day1Date2"></div>
+                    <div class="weatherTemp" id="day1Temp2"></div>
+                    <img class="weatherIcon" id="day1Icon2" src="">
+                </div>
+                <div class="weatherInfo" id="day2_2">
+                    <div class="weatherDate" id="day2Date2"></div>
+                    <div class="weatherTemp" id="day2Temp2"></div>
+                    <img class="weatherIcon" id="day2Icon2" src="">
+                </div>
+                <div class="weatherInfo" id="day3_2">
+                    <div class="weatherDate" id="day3Date2"></div>
+                    <div class="weatherTemp" id="day3Temp2"></div>
+                    <img class="weatherIcon" id="day3Icon2" src="">
+                </div>
+            </div>
+
+            <div class="hourCount">+12 Hours</div>
+
+            <div class="forecastFlexBox">
+                <div class="weatherInfo" id="day1_2_N">
+                    <div class="weatherDate" id="day1Date2N"></div>
+                    <div class="weatherTemp" id="day1Temp2N"></div>
+                    <img class="weatherIcon" id="day1Icon2N" src="">
+                </div>
+                <div class="weatherInfo" id="day2_2_N">
+                    <div class="weatherDate" id="day2Date2N"></div>
+                    <div class="weatherTemp" id="day2Temp2N"></div>
+                    <img class="weatherIcon" id="day2Icon2N" src="">
+                </div>
+                <div class="weatherInfo" id="day3_2_N">
+                    <div class="weatherDate" id="day3Date2N"></div>
+                    <div class="weatherTemp" id="day3Temp2N"></div>
+                    <img class="weatherIcon" id="day3Icon2N" src="">
+                </div>
+            </div>
+        </div>
+
+        <div id="newsBox" class="dashItem">
+            <div class="news" id="news1">
+                <div class="newsFlexItem">
+                    <div class="newsItem" id="newsStory1"></div>
+                    <br>
+                    <div class="newsSource" id="newsSource1"></div>
+                    <br>
+                    <div class="newsDescription" id="newsDescription1"></div>
+                    <br>
+                    <a target="_blank" href="" class="newsLink" id="newsLink1">Link</a>
+                </div>
+                <div class="newsFlexItem">
+                    <img id="newsImg1" class="newsImg" src="">
+                </div>
+            </div>
+            <div class="news" id="news2">
+                <div class="newsFlexItem">
+                    <div class="newsItem" id="newsStory2"></div>
+                    <br>
+                    <div class="newsSource" id="newsSource2"></div>
+                    <br>
+                    <div class="newsDescription" id="newsDescription2"></div>
+                    <br>
+                    <a target="_blank" href="" class="newsLink" id="newsLink2">Link</a>
+                </div>
+                <div class="newsFlexItem">
+                    <img id="newsImg2" class="newsImg" src="">
+                </div>
+            </div>
+            <div class="news" id="news3">
+                <div class="newsFlexItem">
+                    <div class="newsItem" id="newsStory3"></div>
+                    <br>
+                    <div class="newsSource" id="newsSource3"></div>
+                    <br>
+                    <div class="newsDescription" id="newsDescription3"></div>
+                    <br>
+                    <a target="_blank" href="" class="newsLink" id="newsLink3">Link</a>
+                </div>
+                <div class="newsFlexItem">
+                    <img id="newsImg3" class="newsImg" src="">
+                </div>
+            </div>
+        </div>
+
+        <div class="dashItem" id="quoteBox">
+            <div class="quote" id="quoteDiv"></div>
+            <div class="quote" id="authorBar">  -</div>
+            <div class="quote" id="authorDiv"></div>
+        </div>
+
+        <div class="dashItem" id="bookmarkBox">
+            <div class="innerFlexItem" id="bookmarksBox">
+                <div class="bookmark">
+                    <a href="https://youtube.com"><img class="bookmarkIcon" src="icons/youtube.png"></a>
+                </div>
+                <div class="bookmark">
+                    <a href="https://reddit.com"><img class="bookmarkIcon" src="icons/reddit.png"></a>
+                </div>
+                <div class="bookmark">
+                    <a href="https://amazon.com"><img class="bookmarkIcon" src="icons/amazon.png"></a>
+                </div>
+                <div class="bookmark">
+                    <a href="https://github.com"><img class="bookmarkIcon" src="icons/github.png"></a>
+                </div>
+                <div class="bookmark">
+                    <a href="https://jciocoi.com"><img class="bookmarkIcon" src="icons/portfolio.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script src="func.js"></script>
+</body>
+</html>
