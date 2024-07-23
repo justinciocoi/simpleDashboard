@@ -94,23 +94,45 @@ function fetchNews() {
     fetch(`/api/news?q=${keyWord}`)
         .then(response => response.json())
         .then(data => {
-            document.getElementById('newsStory1').innerHTML=`${data.results[0].title}`;
-            document.getElementById('newsStory2').innerHTML=`${data.results[1].title}`;
-            document.getElementById('newsStory3').innerHTML=`${data.results[2].title}`;
-            document.getElementById('newsSource1').innerHTML=`${data.results[0].source_id}`
-            document.getElementById('newsSource2').innerHTML=`${data.results[1].source_id}`
-            document.getElementById('newsSource3').innerHTML=`${data.results[2].source_id}`
-            document.getElementById('newsDescription1').innerHTML=`${data.results[0].description}`
-            document.getElementById('newsDescription2').innerHTML=`${data.results[1].description}`
-            document.getElementById('newsDescription3').innerHTML=`${data.results[2].description}`
-            document.getElementById('newsImg1').src=`${data.results[0].image_url}`
-            document.getElementById('newsImg2').src=`${data.results[1].image_url}`
-            document.getElementById('newsImg3').src=`${data.results[2].image_url}`
-            document.getElementById('newsLink1').href=`${data.results[0].link}`
-            document.getElementById('newsLink2').href=`${data.results[1].link}`
-            document.getElementById('newsLink3').href=`${data.results[2].link}`
+            document.getElementById('newsStory1').innerHTML = `${data.results[0].title}`;
+            document.getElementById('newsStory2').innerHTML = `${data.results[1].title}`;
+            document.getElementById('newsStory3').innerHTML = `${data.results[2].title}`;
+
+            function capitalizeFirstLetterOfEachWord(str) {
+                if(str.length<=3){
+                    return str.toUpperCase();
+                }
+                
+                return str.replace(/\b\w/g, function(char) {
+                    return char.toUpperCase();
+                });
+            }
+
+            document.getElementById('newsSource1').innerHTML = capitalizeFirstLetterOfEachWord(`${data.results[0].source_id}`);
+            document.getElementById('newsSource2').innerHTML = capitalizeFirstLetterOfEachWord(`${data.results[1].source_id}`);
+            document.getElementById('newsSource3').innerHTML = capitalizeFirstLetterOfEachWord(`${data.results[2].source_id}`);
+            
+            // Truncate descriptions to 100 characters
+            const truncate = (text, maxLength) => {
+                if (text.length > maxLength) {
+                    return text.substring(0, maxLength) + '...';
+                }
+                return text;
+            };
+            
+            document.getElementById('newsDescription1').innerHTML = truncate(data.results[0].description, 200);
+            document.getElementById('newsDescription2').innerHTML = truncate(data.results[1].description, 200);
+            document.getElementById('newsDescription3').innerHTML = truncate(data.results[2].description, 200);
+            
+            document.getElementById('newsImg1').src = `${data.results[0].image_url}`;
+            document.getElementById('newsImg2').src = `${data.results[1].image_url}`;
+            document.getElementById('newsImg3').src = `${data.results[2].image_url}`;
+            document.getElementById('newsLink1').href = `${data.results[0].link}`;
+            document.getElementById('newsLink2').href = `${data.results[1].link}`;
+            document.getElementById('newsLink3').href = `${data.results[2].link}`;
         })
 }
+
 
 //function to update time once per second
 function updateDateTime() {

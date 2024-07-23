@@ -33,7 +33,6 @@ body {
 
 .dashItem:hover{
     background:  rgba(119, 166, 200, 0.3);
-    transform: scale(103%);
     border-radius: 20px;
 }
 
@@ -251,7 +250,7 @@ body {
 }
 
 .news {
-    background-color: slategray;
+    background-color: rgba(112, 128, 144, 0.55);
     width: fit-content;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -263,9 +262,9 @@ body {
 }
 
 .newsImg {
-  height: 100px;  
+  width: 175px;  
   padding: 15px;
-  border-radius: 40px;
+  border-radius: 20px;
 }
 
 .newsLink{
